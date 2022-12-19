@@ -12,13 +12,9 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.GetBalance();
     this.GetAccounts();
   }
 
-  GetBalance(){
-    //..
-  }
 
   GetAccounts(){
     //..

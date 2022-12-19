@@ -14,4 +14,8 @@ export class LoginService {
     const url = new URL('authentication/login',environment.baseUrl);
     return this.http.post<UserResponseDto>(url.toString(),login);
   }
+
+  setUserStorage(user:UserResponseDto){
+    sessionStorage.setItem('user', JSON.stringify(user));
+  }
 }

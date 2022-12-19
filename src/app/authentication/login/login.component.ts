@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/Authentication/auth.service';
 import { LoginDto } from '../models/login/login-dto.model';
 import { LoginService } from './login.service';
 
@@ -12,7 +13,8 @@ export class LoginComponent{
   login:LoginDto
   constructor(
     private readonly router: Router,
-    private readonly service: LoginService
+    private readonly service: LoginService,
+    private readonly authService: AuthService
   ) { 
     this.login = {
       password:'',
@@ -38,14 +40,17 @@ export class LoginComponent{
         this.disableButtoms = false;
         alert("this user does not exist");  
       }else{
+        this.authService.setUserStorage(result);
         this.GoToHome();
       }
+    },(err)=>{
+      alert("ERROR");  
+      this.disableButtoms = false;
     });
     }else{
       this.disableButtoms = false;
       alert('Please, fill in all the fields.')
     }
-    
   }
 
   validateFields(){

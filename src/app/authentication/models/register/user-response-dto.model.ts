@@ -3,4 +3,5 @@ export interface UserResponseDto{
     username:string;
     clientId:number;
     client:any;
+    tokenJwt:string;
 }

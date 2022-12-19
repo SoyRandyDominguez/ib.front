@@ -7,9 +7,10 @@ import { RegisterService } from './register.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   user:CreateUserDto;
+  disableButtoms =false;
   constructor(
     private readonly router: Router,
     private readonly service:RegisterService
@@ -23,19 +24,25 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-  }
   GoToBack(){
     this.router.navigate(['authentication/login']);
   }
 
-  async createUser(){
+  GoToHome(){
+    this.router.navigate(['home/main']);
+  }
+
+
+  createUser(){
+    this.disableButtoms = true;
     if(this.validateFields()){
-      const result = await this.service.createUser(this.user).toPromise();
-      alert("User created");      
-      console.log('result',result);
+      this.service.createUser(this.user).subscribe((result)=>{
+        alert("User created"); 
+        this.GoToHome();
+      });     
     }else{
       alert('Please, fill in all the fields.')
+      this.disableButtoms = false;
     }
     
   }

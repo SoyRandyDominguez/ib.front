@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
@@ -15,13 +16,13 @@ const routes: Routes = [
           title: 'Login'
       }
   }
-  // ,{
-  //     path: 'sign-up',
-  //     component: SignUpComponent,
-  //     data: {
-  //         title: 'Sign Up'
-  //     }
-  // },
+  ,{
+      path: 'register',
+      component: RegisterComponent,
+      data: {
+          title: 'Sign Up'
+      }
+  },
 ];
 
 @NgModule({

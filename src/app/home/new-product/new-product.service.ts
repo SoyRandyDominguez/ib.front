@@ -9,7 +9,9 @@ import { CreateAccountDto } from './create-account-dto.model';
 })
 export class NewProductService {
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {
+    //this empty method is intentional
+  }
 
   CreateAccount(create:CreateAccountDto){
     const url = new URL(`Account/create-account`,environment.baseUrl);

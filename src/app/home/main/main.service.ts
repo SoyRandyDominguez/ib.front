@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class MainService {
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {
+    //this empty method is intentional
+  }
 
   GetBalance(clientId:number){
     const url = new URL(`Account/get-total-balance-by-clientid?clientId=${clientId}`,environment.baseUrl);

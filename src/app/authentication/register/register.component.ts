@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CreateUserDto } from '../models/register/create-user-dto.model';
 import { RegisterService } from './register.service';
-
 @Component({
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']

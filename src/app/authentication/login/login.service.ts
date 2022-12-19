@@ -8,7 +8,9 @@ import { LoginDto } from '../models/login/login-dto.model';
 })
 export class LoginService {
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {
+    //this empty method is intentional
+  }
 
   login(login:LoginDto){
     const url = new URL('authentication/login',environment.baseUrl);

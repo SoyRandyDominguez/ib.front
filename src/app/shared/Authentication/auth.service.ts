@@ -16,6 +16,4 @@ export class AuthService {
     sessionStorage.removeItem(USER_KEY)
   }
 }
-
-
 const USER_KEY: string = 'userdata'

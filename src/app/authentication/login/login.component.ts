@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/Authentication/auth.service';
 import { LoginDto } from '../models/login/login-dto.model';
 import { LoginService } from './login.service';
-
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
@@ -21,8 +20,6 @@ export class LoginComponent{
       username:'',
     }
   }
-
- 
 
   GoToRegisterUser(){
     this.router.navigate(['authentication/register']);

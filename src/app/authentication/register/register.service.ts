@@ -8,7 +8,9 @@ import { UserResponseDto } from '../models/register/user-response-dto.model';
 })
 export class RegisterService {
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {
+    //this empty method is intentional
+  }
 
   createUser(user:CreateUserDto){
     const url = new URL('authentication/register-user',environment.baseUrl);

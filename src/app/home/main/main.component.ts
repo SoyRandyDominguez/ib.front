@@ -1,23 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component} from '@angular/core';
 @Component({
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  templateUrl: './main.component.html'
 })
-export class MainComponent implements OnInit {
-
-  constructor(
-    private readonly router: Router
-  ) { }
-
-  ngOnInit(): void {
-    this.GetAccounts();
-  }
-
-
-  GetAccounts(){
-    //..
-  }
-
+export class MainComponent{
 }

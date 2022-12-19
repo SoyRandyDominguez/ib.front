@@ -5,9 +5,7 @@ import { CreateAccountDto } from './create-account-dto.model';
 import { NewProductService } from './new-product.service';
 
 @Component({
-  selector: 'app-new-product',
-  templateUrl: './new-product.component.html',
-  styleUrls: ['./new-product.component.scss']
+  templateUrl: './new-product.component.html'
 })
 export class NewProductComponent implements OnInit {
 
@@ -16,9 +14,7 @@ export class NewProductComponent implements OnInit {
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router,
-    private readonly service:NewProductService
-
-  ) {
+    private readonly service:NewProductService) {
     this.createAccount = {
       clientId: 0,
       password:"",

@@ -13,7 +13,9 @@ export class TotalHeaderComponent implements OnInit {
   constructor(
     private readonly service: MainService,
     private readonly authService:AuthService
-  ) { }
+  ) { 
+    //this empty method is intentional
+  }
 
   ngOnInit(): void {
     this.GetBalance();

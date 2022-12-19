@@ -6,8 +6,7 @@ import { MainService } from '../main.service';
 
 @Component({
   selector: 'account-list',
-  templateUrl: './account-list.component.html',
-  styleUrls: ['./account-list.component.scss']
+  templateUrl: './account-list.component.html'
 })
 export class AccountListComponent implements OnInit {
 
@@ -16,7 +15,9 @@ export class AccountListComponent implements OnInit {
     private readonly service: MainService,
     private readonly authService:AuthService,
     private readonly router:Router
-  ) { }
+  ) { 
+    //this empty method is intentional
+  }
 
   ngOnInit(): void {
     this.GetBalance();

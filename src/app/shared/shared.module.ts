@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MenuHeaderComponent } from './menu-header/menu-header.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MenuHeaderComponent
+  ],
   imports: [
     CommonModule,
     FormsModule
   ],
   exports:[
-    FormsModule
+    FormsModule,
+    MenuHeaderComponent
   ]
 })
 export class SharedModule { }

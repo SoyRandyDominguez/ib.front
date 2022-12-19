@@ -8,13 +8,13 @@
       <div class="navbar-collapse collapse" id="navbarsExample01" >
         <ul class="navbar-nav me-auto mb-2">
           <li class="nav-item">
-            <a class="nav-link active" (click)="GoLink('main')">Home</a>
+            <a class="nav-link " [ngClass]="{'active': activeMenu === 'main'}" (click)="GoLink('main')">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="GoLink('transactions')">Transactions</a>
+            <a class="nav-link" [ngClass]="{'active': activeMenu === 'transactions'}"(click)="GoLink('transactions')">Transactions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="GoLink('beneficiaries')">Beneficiaries</a>
+            <a class="nav-link" [ngClass]="{'active': activeMenu === 'beneficiaries'}"(click)="GoLink('beneficiaries')">Beneficiaries</a>
           </li>
         </ul> 
       </div>

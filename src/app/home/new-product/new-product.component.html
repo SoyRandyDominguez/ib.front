@@ -1,0 +1,42 @@
+<menu-header [activeMenu]="'new-product'"></menu-header>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="pb-2 border-bottom">Open new product</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Select account type</label>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="SA" [(ngModel)]="createAccount.typeCode">
+                            <label class="form-check-label" for="inlineRadio1">Saving Account</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="CA" [(ngModel)]="createAccount.typeCode">
+                            <label class="form-check-label" for="inlineRadio2">Checking Account</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" [(ngModel)]="createAccount.password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" [(ngModel)]="confirmPassword"class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" (click)="CreateAccount()">Create</button>
+                    <button class="w-100 mt-3 btn btn-lg btn-outline-danger" (click)="GoBackHome()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

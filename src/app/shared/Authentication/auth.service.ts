@@ -4,14 +4,18 @@ import { UserResponseDto } from 'src/app/authentication/models/register/user-res
   providedIn: 'root'
 })
 export class AuthService {
-
-  constructor() {}
-
   setUserStorage(user:UserResponseDto){
-    sessionStorage.setItem('user', JSON.stringify(user));
+    sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
   getUserStorage(){
-    return JSON.parse(sessionStorage.getItem('user')?? '{}');
+    return JSON.parse(sessionStorage.getItem(USER_KEY)?? '{}');
+  }
+
+  logout(){
+    sessionStorage.removeItem(USER_KEY)
   }
 }
+
+
+const USER_KEY: string = 'userdata'

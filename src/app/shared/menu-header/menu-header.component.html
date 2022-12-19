@@ -16,6 +16,12 @@
           <li class="nav-item">
             <a class="nav-link" [ngClass]="{'active': activeMenu === 'beneficiaries'}"(click)="GoLink('beneficiaries')">Beneficiaries</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activeMenu === 'new-product'}"(click)="GoLink('new-product')">Open new product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="Logout()">Logout</a>
+          </li>
         </ul> 
       </div>
     </div>
